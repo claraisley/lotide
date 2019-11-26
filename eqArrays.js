@@ -15,7 +15,7 @@ const eqArrays = function(a, b) {
     if (a[i] !== b[i]) return false;
   }
   return true;
-}
+};
 
 assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertEqual(eqArrays([2, 3, 1], [1, 2, 3]), false);
