@@ -6,13 +6,16 @@ const assertEqual = function(actual, expected) {
     console.log(`🚫🚫🚫Assertion Failed: ${actual} === ${expected}`);
   }
 };
-const head = function(yourArray){
-  return yourArray.shift();
-};
 
+const eqArrays = function(a, b) {
+  let i = a.length;
+  if (i != b.length) return false;
+  
+  while (i--) {
+    if (a[i] !== b[i]) return false;
+  }
+  return true;
+}
 
-
-
-
-assertEqual(head([1, 4, 5]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertEqual(eqArrays([2, 3, 1], [1, 2, 3]), false);
