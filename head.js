@@ -3,7 +3,7 @@ const assertEqual = function(actual, expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
     (actual !== expected);
-    console.log(`🚫🚫🚫Assertion Failed: ${actual} === ${expected}`);
+    console.log(`🚫🚫🚫Assertion Failed: ${actual} !== ${expected}`);
   }
 };
 const head = function(yourArray){
