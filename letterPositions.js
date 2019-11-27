@@ -1,11 +1,12 @@
 const letterPositions = function(sentence) {
   const results = {};
-  let noSpaces = sentence.toLowerCase().split(" ").join("");
 
-  for (let i = 0; i < noSpaces.length; i++) {
-    const letter = noSpaces[i];
+  for (let i = 0; i < sentence.length; i++) {
+    const letter = sentence[i];
     if (results.hasOwnProperty(letter) === false) {
+      if(letter !== " ") {
       results[letter] = [i];
+      }
     } else {
       results[letter].push(i);
     }
@@ -13,7 +14,8 @@ const letterPositions = function(sentence) {
   return results;
 }
 
-console.log(letterPositions("hello"))
+
+console.log(letterPositions("lighthouse in the house"))
 const eqArrays = function(a, b) {
   let i = a.length;
   if (i != b.length) return false;
