@@ -10,6 +10,3 @@ const assertArraysEqual = function(a, b) {
 };
 
 module.exports = assertArraysEqual;
-
-assertArraysEqual(['a'], ['a']);
-assertArraysEqual(['a'], ['b']);
