@@ -1,12 +1,5 @@
-const eqArrays = function(a, b) {
-  let i = a.length;
-  if (i != b.length) return false;
-  
-  while (i--) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
+
+const eqArrays = require('./eqArrays');
 
 const assertArraysEqual = function(a, b) {
   if (eqArrays(a, b)) {
@@ -14,7 +7,9 @@ const assertArraysEqual = function(a, b) {
   } else {
     console.log(`🚫🚫🚫Assertion Failed: ${a} !== ${b}`);
   }
-}
+};
+
+module.exports = assertArraysEqual;
 
 assertArraysEqual(['a'], ['a']);
 assertArraysEqual(['a'], ['b']);
